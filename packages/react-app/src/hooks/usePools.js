@@ -20,10 +20,10 @@ export const usePools = () => {
 
   useEffect(() => {
     loadPools(readOnlyUrls[readOnlyChainId])
-      .then((pools) => {
-        setPools(pools);
-        setLoading(false);
-      });
+        .then((pools) => {
+          setPools(pools);
+          setLoading(false);
+        });
   }, [readOnlyUrls, readOnlyChainId]);
 
   return [loading, pools];
